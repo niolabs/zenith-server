@@ -14,8 +14,8 @@ function visit(reql, fn) {
 
 const RDBVal = Object.getPrototypeOf(r.expr(1));
 module.exports = function rereql(reql, blacklist) {
-  const safe = visit(reql, (term) => blacklist.indexOf(term) === -1);
-  if (!safe) {
+  const isSafe = visit(reql, (term) => blacklist.indexOf(term) === -1);
+  if (!isSafe) {
     throw new Error('REQL expression contains restricted terms');
   }
 
