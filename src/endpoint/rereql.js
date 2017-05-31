@@ -5,7 +5,7 @@ const r = require('rethinkdb');
 function visit(reql, fn) {
   const queue = [ reql ];
   while (queue.length > 0) {
-    const [ op, args ] = queue.pop();
+    const [ op, args, _opts ] = queue.pop();
     if (fn(op, args) === false) { return false; }
     args.forEach((term) => Array.isArray(term) && queue.push(term));
   }
