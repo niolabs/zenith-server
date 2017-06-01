@@ -9,7 +9,7 @@ const getType = require('mime-types').contentType;
 
 // TODO: dynamically serve different versions of the horizon
 // library. Minified, Rx included etc.
-const horizon_client_path = require.resolve('@horizon/client/dist/horizon');
+const horizon_client_path = require.resolve('@nio/zenith-client/dist/horizon');
 
 const endpoints = {
   insert: require('./endpoint/insert'),

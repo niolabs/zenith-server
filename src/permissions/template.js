@@ -3,8 +3,8 @@
 const check = require('../error').check;
 const remake_error = require('../utils').remake_error;
 
-const ast = require('@horizon/client/lib/ast');
-const validIndexValue = require('@horizon/client/lib/util/valid-index-value').default;
+const ast = require('@nio/zenith-client/lib/ast');
+const validIndexValue = require('@nio/zenith-client/lib/util/valid-index-value').default;
 const vm = require('vm');
 
 let template_compare;
