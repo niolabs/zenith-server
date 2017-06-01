@@ -1,7 +1,7 @@
 {
-  "name": "@horizon/server",
+  "name": "@nio/zenith-server",
   "version": "2.0.0",
-  "description": "Server for RethinkDB Horizon, an open-source developer platform for building realtime, scalable web apps.",
+  "description": "zenith-server is a fork of the server component of RethinkDB Horizon, an open-source developer platform for building realtime, scalable web apps.",
   "main": "src/horizon.js",
   "scripts": {
     "lint": "eslint src test",
@@ -10,19 +10,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rethinkdb/horizon.git"
+    "url": "git+https://github.com/nioinnovation/zenith-server.git"
   },
   "author": "RethinkDB",
+  "contributors": [
+    {
+      "name": "n.io",
+      "email": "info@n.io",
+      "url": "https://n.io/"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rethinkdb/horizon/issues"
+    "url": "https://github.com/nioinnovation/zenith-server/issues"
   },
-  "homepage": "https://github.com/rethinkdb/horizon#readme",
+  "homepage": "https://github.com/nioinnovation/zenith-server#readme",
   "engines": {
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@horizon/client": "2.0.0",
+    "@nio/zenith-client": "2.0.0",
     "bluebird": "^3.4.0",
     "cookie": "^0.2.3",
     "joi": "^8.0.4",
