@@ -31,12 +31,12 @@ const websocket = require('ws');
 
 const protocol_name = 'rethinkdb-horizon-v0';
 
-const accept_protocol = (protocols, cb) => {
+const accept_protocol = (protocols) => {
   if (protocols.findIndex((x) => x === protocol_name) !== -1) {
-    cb(true, protocol_name);
+    return protocol_name;
   } else {
     logger.debug(`Rejecting client without "${protocol_name}" protocol (${protocols}).`);
-    cb(false, null);
+    return false
   }
 };
 
@@ -104,9 +104,11 @@ class Server {
         }
       };
 
-      const ws_options = { handleProtocols: accept_protocol,
-                           allowRequest: verify_client,
-                           path: this._path };
+      const ws_options = {
+        handleProtocols: accept_protocol,
+        verifyClient: verify_client,
+        path: this._path,
+      };
 
       const add_websocket = (server) => {
         const ws_server = new websocket.Server(Object.assign({ server }, ws_options))
