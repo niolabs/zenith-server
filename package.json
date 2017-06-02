@@ -29,7 +29,7 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
-    "@nio/zenith-client": "2.0.0",
+    "@nio/zenith-client": "2.0.1",
     "bluebird": "^3.4.0",
     "cookie": "^0.2.3",
     "joi": "^8.0.4",
